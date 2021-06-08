@@ -1,0 +1,37 @@
+# minikube version
+# minikube start
+# minikube status
+# kubectl get nodes
+# kubectl get deployments
+# kubectl get services
+# kubectl get pods
+
+# kubectl create deployment dsgweb --image=nginx
+
+https://hub.docker.com/_/nginx
+
+# kubectl get replicaset
+
+# kubectl exec -it "dsgweb-6964f58b76-nbp8l" -- bin/bash
+
+# kubectl edit deployment dsgweb
+# if not work edit on dashboard
+
+# kubectl get po
+# kubectl get replicasets
+# kubectl get po
+
+******* show production test***********
+# vim  nginx-deployment.yaml
+# kubectl apply -f nginx-deployment.yaml
+
+# kubectl get deployment
+# kubectl get pod
+# kubectl get replication
+
+# vim nginx-LB-service.yaml
+
+# kubectl apply -f nginx-LB-service.yaml
+# kubectl get services
+
+# minikube service nginx-lb-service
