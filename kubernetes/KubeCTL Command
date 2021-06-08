@@ -1,2 +1,0 @@
-Show Pods name only
-kubectl get pods -o=name |  sed "s/^.\{4\}//"
