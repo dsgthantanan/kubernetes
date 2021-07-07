@@ -1,0 +1,21 @@
+ Insert line to ingress yaml configure:
+
+*************************************************************************************************************
+
+metadata: 
+   annotations:
+    # Select nginx load balancer
+    kubernetes.io/ingress.class: front/nginx/app/gql #depend on nginx-ingress class
+
+    # Select Certificate cluster issuer
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+
+    # 
+spec:
+    tls:
+    - hosts:
+        - dev-www.dollarsmartglobal.com
+        secretName: dsg-front-tls #store key
+
+
+*************************************************************************************************************
