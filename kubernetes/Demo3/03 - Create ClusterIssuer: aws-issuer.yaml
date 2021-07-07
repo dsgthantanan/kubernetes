@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: aws-issuer # Cluster Issuer Name
+spec:
+  acme:
+    email: sysadmin@dollarsmart.co
+    privateKeySecretRef:
+      name: aws-r53-key
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+    - dns01:
+        route53:
+          accessKeyID: <AWSAccessID>
+          hostedZoneID: Z22I3SJKCU9OMI #DSGDNSZONEID
+          region: ap-southeast-1
+          secretAccessKeySecretRef:
+            key: secret-access-key
+            name: aws-route53-secret # SecretName

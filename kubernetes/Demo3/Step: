@@ -1,0 +1,6 @@
+1. Add Cert-Manager
+2. Add Ingress
+3. Point DNS to Public IP
+4. Add AWS Route53 Credential Secret
+5. Create Cluster issuer
+5. Create Certificate and Request

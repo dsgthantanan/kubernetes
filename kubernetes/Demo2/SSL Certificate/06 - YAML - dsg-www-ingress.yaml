@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dsg-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    #certificate
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  rules:
+  - host: dev-www.dollarsmartglobal.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: dsg-admin
+            port:
+              number: 8080
+  tls:
+  - hosts:
+    - dev-www.dollarsmartglobal.com
+    secretName: dsg-tls

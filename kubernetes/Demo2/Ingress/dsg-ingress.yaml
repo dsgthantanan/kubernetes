@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dsg-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx1
+spec:
+  rules:
+  - host: dev-admin.dollarsmartglobal.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: dsg-admin
+            port:
+              number: 8080
+  - host: dev-teller.dollarsmartglobal.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: dsg-teller
+            port:
+              number: 8080
+  - host: dev-rdb.dollarsmartglobal.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: dsg-graphql-dsgrfb
+            port:
+             number: 4000

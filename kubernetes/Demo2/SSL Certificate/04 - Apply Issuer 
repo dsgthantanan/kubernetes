@@ -1,0 +1,3 @@
+kubectl create -f prod-let.yaml 
+
+kubectl get issuer
