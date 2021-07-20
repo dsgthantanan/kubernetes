@@ -1,14 +1,14 @@
 
-kubectl get certificate -n dsg-front
+kubectl get certificate --all-namespaces
 # เพื่อดูว่า certificate ออกเสร็จหรือยัง
 
-kubectl get secret -n dsg-front
+kubectl get secret --all-namespaces
 # เพื่อดูว่า public/private key ได้เก็บลงไปหรือยัง (ต้องทุก step ผ่านหมดจึงจะได้ secret เป็น valid true)
 
-kubectl get signingrequest -n dsg-front
+kubectl get signingrequest --all-namespaces
 # เพื่อดูจังหวะการขอ Certificate จาก Let's Encrypt/ ACME ใดๆก็ตามที่เราระบุ
 
-kubectl get order -n dsg-front
+kubectl get order --all-namespaces
 # เพื่อดูจังหวะการขอ order ซึ่งจังหวะนี้ถ้าหาก token api เราผิดเช่นเราใช้ Cloudflare แล้ว scope privilege ไม่ถึงหรือใช้ Google Cloud DNS แล้วเราตั้ง service account ผิด scope จะมี error แสดงตรงแถวๆนี้
 
-kubectl get challenge -n dsg-front
+kubectl get challenge --all-namespaces
