@@ -1,0 +1,15 @@
+# migration-tools export --url http://139.162.16.10:8080/v2-beta --access-key 1879BE5BE8A2A56B6276  --secret-key PhP7g69vkb4sWviFLSRgNWXkSyWbdYkbYX8DQWYT --export-dir "C:\Users\THANTANAN\Documents\Stage Rancher Configuration Files"  --all
+
+# cd "%userprofile%\Documents\Stage Rancher Configuration Files\Staging\BS-App"
+
+# migration-tools parse --docker-file "docker-compose.yml"  --rancher-file "rancher-compose.yml"
+
+# cd "%userprofile%\Documents\Stage Rancher Configuration Files\Staging\DSG-App"
+
+
+API Key
+Access Key (Username)
+1879BE5BE8A2A56B6276 
+
+Secret Key (Password)
+PhP7g69vkb4sWviFLSRgNWXkSyWbdYkbYX8DQWYT
